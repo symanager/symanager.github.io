@@ -1,19 +1,206 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SyManager</title><meta name="description" content="Manage your Synology NAS from your iPhone and iPad."><link rel="stylesheet" href="style.css"></head>
-<body><header><a class="brand" href="./">SyManager</a><nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SyManager: NAS Manager for iPhone and iPad</title>
+<meta name="description" content="SyManager is a native iPhone and iPad app for managing a Synology NAS running DSM 7: live monitoring, files, storage, Control Panel, containers, virtual machines and more.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#3E9BEF">
+<link rel="icon" href="img/icon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="./">
+    <img src="img/icon-64.png" alt="" width="32" height="32">
+    <span>SyManager</span>
+  </a>
+  <nav aria-label="Site">
+    <a href="#features">Features</a>
+    <a href="#privacy">Privacy</a>
+    <a href="support.html">Support</a>
+    <a class="pill" href="#testflight">Join the beta</a>
+  </nav>
+</header>
+
 <main>
-<div class="card hero">
-<h1>SyManager</h1>
-<p class="muted">Manage your Synology NAS from your iPhone and iPad: storage, shared folders, users, packages, containers, virtual machines and more, with the same options as DSM.</p>
-<div class="buttons"><a class="btn" href="https://github.com/symanager/community/issues/new?template=bug_report.yml">Report a bug</a><a class="btn secondary" href="support.html">Get help</a></div>
-</div>
-<div class="card">
-<h2>Private by design</h2>
-<p>SyManager talks directly to your NAS. There are no SyManager servers, accounts, ads or analytics. <a href="privacy.html">Read the privacy policy</a>.</p>
-<h2>Requirements</h2>
-<ul><li>A Synology NAS running DSM 7</li><li>iPhone or iPad with iOS 18 or later</li></ul>
-</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>Your Synology&nbsp;NAS, managed from iPhone and&nbsp;iPad.</h1>
+      <p class="lede">SyManager is a native app for NAS running DSM&nbsp;7. Check its health, browse files, run containers and virtual machines, and change settings, through the same API DSM’s own web interface uses.</p>
+      <div class="cta">
+        <a class="button" href="#testflight">Join the TestFlight beta</a>
+        <span class="soon">Coming to the App Store</span>
+      </div>
+      <p class="req">iPhone and iPad with iOS&nbsp;18 or later. Works with DSM&nbsp;7.</p>
+    </div>
+
+    <div class="faceplate" role="img" aria-label="A four-bay NAS faceplate with its drive lights on">
+      <div class="bay"><span class="led ok"></span><span class="led act a1"></span></div>
+      <div class="bay"><span class="led ok"></span><span class="led act a2"></span></div>
+      <div class="bay"><span class="led ok"></span><span class="led act a3"></span></div>
+      <div class="bay"><span class="led ok"></span><span class="led act a4"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="tour">
+
+  <article class="feature">
+    <figure class="shot"><picture><source srcset="img/graphs-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/graphs.webp" width="600" height="272" alt="Monitor tab: CPU, memory, network and disk graphs"></picture></figure>
+    <div class="text">
+      <h2>See how it’s doing, live</h2>
+      <p>CPU, memory, network and disk graphs update as you watch. Below them, Monitor shows a card for each app you have installed: volumes and their health, backups, containers, virtual machines, recent warnings from the logs. Reorder the cards or hide the ones you don’t need.</p>
+    </div>
+  </article>
+
+  <article class="feature flip">
+    <figure class="shot"><picture><source srcset="img/files-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/files.webp" width="660" height="610" alt="Files tab: favorite folders and shared folders"></picture></figure>
+    <div class="text">
+      <h2>Your files, wherever you are</h2>
+      <p>Browse shared folders the way File Station lays them out. Preview, rename, move and delete; upload from your iPhone and download to it; pin favorites; and create share links to send to anyone.</p>
+    </div>
+  </article>
+
+  <article class="feature">
+    <figure class="shot tall"><picture><source srcset="img/storage-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/storage.webp" width="660" height="1135" alt="Storage Manager: three healthy storage pools and their volumes"></picture></figure>
+    <div class="text">
+      <h2>Drives, pools and volumes</h2>
+      <p>Storage Manager shows every pool, volume and drive with its health and usage. When a drive needs attention, the NAS tab tells you first, with the faceplate lit up the way the real one is.</p>
+    </div>
+  </article>
+
+  <article class="feature flip">
+    <figure class="shot tall"><picture><source srcset="img/vms-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/vms.webp" width="660" height="1105" alt="Virtual Machines: three virtual machines, two running"></picture></figure>
+    <div class="text">
+      <h2>Containers and virtual machines</h2>
+      <p>Start, stop and edit Container Manager projects and containers, read their logs and open a terminal. In Virtual Machine Manager, create machines, take snapshots, open the console, and set up Virtual DSM with its license.</p>
+    </div>
+  </article>
+
+  <article class="feature">
+    <figure class="shot tall dark"><img src="img/resources.webp" width="660" height="1085" alt="Resource Monitor in dark mode: performance graphs"></figure>
+    <div class="text">
+      <h2>Made for iPhone and iPad</h2>
+      <p>SyManager is written in SwiftUI, with no web views standing in for DSM’s pages. It follows Dark Mode, spreads out into wider layouts on iPad, and can open pages in their own windows side by side.</p>
+    </div>
+  </article>
+
+  <article class="feature flip">
+    <figure class="shot tall"><picture><source srcset="img/advisor-dark.webp" media="(prefers-color-scheme: dark)"><img src="img/advisor.webp" width="660" height="1115" alt="Security Advisor: scan results by category"></picture></figure>
+    <div class="text">
+      <h2>Keep it safe</h2>
+      <p>Run Security Advisor scans, review sign-ins in Log Center, and manage the firewall, certificates and account protection from Control Panel. Set up two-factor authentication for yourself or for other users without leaving the app.</p>
+    </div>
+  </article>
+
+</section>
+
+<section class="catalog" aria-labelledby="catalog-h">
+  <div class="wrap">
+    <h2 id="catalog-h">Everything it covers</h2>
+    <p class="sub">Apps appear when they’re installed on your NAS.</p>
+
+    <div class="lists">
+      <div class="group">
+        <h3>DSM apps</h3>
+        <ul class="rows">
+          <li><b>Package Center</b><span>Install, update, start and stop packages</span></li>
+          <li><b>Storage Manager</b><span>Pools, volumes, drives and their health</span></li>
+          <li><b>Resource Monitor</b><span>Performance, tasks, connections and alarms</span></li>
+          <li><b>Storage Analyzer</b><span>Reports on what’s using space</span></li>
+          <li><b>Log Center</b><span>System, connection, transfer and drive logs</span></li>
+          <li><b>Security Advisor</b><span>Scan results and sign-in activity</span></li>
+          <li><b>Virtual Machine Manager</b><span>Virtual machines, snapshots and console</span></li>
+          <li><b>Hyper Backup</b><span>Backup tasks, versions and restore</span></li>
+          <li><b>Active Insight</b><span>Monitoring status for this NAS</span></li>
+          <li><b>SAN Manager</b><span>LUNs, iSCSI targets, hosts and snapshots</span></li>
+          <li><b>Snapshot Replication</b><span>Snapshots, schedules, retention and restore</span></li>
+          <li><b>Surveillance Station</b><span>Live view, recordings and Home Mode</span></li>
+          <li><b>Container Manager</b><span>Compose projects, containers and logs</span></li>
+          <li><b>Download Station</b><span>Downloads, search and RSS</span></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h3>Control Panel</h3>
+        <ul class="rows">
+          <li><b>Shared folders</b><span>Create, edit, permissions, snapshots</span></li>
+          <li><b>Users and groups</b><span>Create and edit, permissions, app privileges, 2FA</span></li>
+          <li><b>File services</b><span>SMB, NFS, rsync and more</span></li>
+          <li><b>Network and external access</b><span>Interfaces, routes, VPN, QuickConnect</span></li>
+          <li><b>Security</b><span>Firewall, certificates, account protection</span></li>
+          <li><b>Notifications</b><span>Rules and events</span></li>
+          <li><b>Hardware and power</b><span>Schedules, hibernation, beeps</span></li>
+          <li><b>Update and system</b><span>DSM updates, Info Center, Task Scheduler</span></li>
+        </ul>
+
+        <h3>On your iPhone</h3>
+        <ul class="rows">
+          <li><b>Sign in your way</b><span>QuickConnect ID or address, with 2FA codes</span></li>
+          <li><b>More than one NAS</b><span>Switch between them from the NAS tab</span></li>
+          <li><b>Face ID</b><span>Unlock instead of typing your password</span></li>
+          <li><b>Restart and shut down</b><span>With progress until it’s back</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="privacy">
+  <div class="wrap">
+    <h2>Between you and your NAS</h2>
+    <dl class="promises">
+      <div><dt>No account</dt><dd>There’s nothing to sign up for. You sign in to your own NAS, nothing else.</dd></div>
+      <div><dt>No tracking</dt><dd>No analytics, no ads, no third-party code. SyManager has no servers of its own.</dd></div>
+      <div><dt>Keychain only</dt><dd>Passwords stay in your device’s Keychain and are only sent to your NAS.</dd></div>
+    </dl>
+    <p class="more"><a href="privacy.html">Read the privacy policy</a></p>
+  </div>
+</section>
+
+<section class="beta" id="beta">
+  <div class="wrap beta-inner">
+    <img src="img/icon-180.png" width="96" height="96" alt="SyManager app icon">
+    <div>
+      <h2>Free while it’s in beta</h2>
+      <p>SyManager is in TestFlight now. When it reaches the App Store, it will be a free download, with a one-time purchase to unlock making changes.</p>
+      <div class="cta">
+        <a class="button" href="#testflight">Join the TestFlight beta</a>
+        <a class="quiet" href="https://github.com/symanager/community/issues/new?template=bug_report.yml">Report a bug</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer>SyManager is an independent app and is not affiliated with or endorsed by Synology Inc. Synology and DSM are trademarks of Synology Inc.</footer>
-</body></html>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <img src="img/icon-64.png" alt="" width="28" height="28">
+        <span>SyManager</span>
+      </div>
+      <nav aria-label="App">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of use</a>
+      </nav>
+      <nav aria-label="Community">
+        <a href="https://github.com/symanager/community">Community</a>
+        <a href="https://github.com/symanager/community/discussions">Discussions</a>
+        <a href="https://github.com/symanager/community/issues/new?template=bug_report.yml">Report a bug</a>
+      </nav>
+    </div>
+    <p class="legal">SyManager is an independent app and is not affiliated with or endorsed by Synology Inc. Synology and DSM are trademarks of Synology Inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>
